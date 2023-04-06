@@ -10,10 +10,10 @@ d3.csv("../../../dataset1_residuos.csv", d3.autoType).then((data)=>{
                     {
                         filter: d => {
                         return (
-                            d.prestacion == 'RECOLECCIÓN DE RESIDUOS FUERA DEL CONTENEDOR'
+                            d.periodo == 202109
                         )
                         },
-                        y: 'domicilio_comuna',
+                        y: 'prestacion',
                         sort: { y: 'x', reverse: true },
                     },
                 ),
