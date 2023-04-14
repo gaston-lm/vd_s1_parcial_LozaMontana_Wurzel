@@ -3,10 +3,28 @@ d3.json('https://cdn.jsdelivr.net/npm/d3-time-format@3/locale/es-ES.json').then(
 })
 
 const parseTime = d3.timeParse('%Y-%m-%d %H:%M:%S');
-p = parseTime("2021-04-04 04:56:07");
-console.log(p)
 
-d3.csv("../../../dataset1_residuos.csv", d3.autoType).then((data)=>{
+// agrupar por 1: "residuos fuera de contenedor/campana verde" 
+// - LIMPIEZA DE CAMPANA Y/O RESIDUOS DISEMINADOS ALREDEDOR
+// - RECOLECCIÓN DE RESIDUOS FUERA DEL CONTENEDOR
+// - RESIDUOS ACUMULADOS O DISEMINADOS FUERA DE PUNTO VERDE
+// agrupar por 2: "vaciado de conetenedor/campana verde"
+// - VACIADO DE CAMPANA VERDE
+// - VACIADO DE CONTENEDOR
+
+d3.csv("../../data/dataset_residuos.csv", d3.autoType).then((data)=>{
+  const prestacionMapping = {
+    'LIMPIEZA DE CAMPANA Y/O RESIDUOS DISEMINADOS ALREDEDOR': 'Residuos fuera de contenedor/campana verde',
+    'RECOLECCIÓN DE RESIDUOS FUERA DEL CONTENEDOR': 'Residuos fuera de contenedor/campana verde',
+    'RESIDUOS ACUMULADOS O DISEMINADOS FUERA DE PUNTO VERDE': 'Residuos fuera de contenedor/campana verde',
+    'VACIADO DE CAMPANA VERDE': 'Vaciado de conetenedor/campana verde',
+    'VACIADO DE CONTENEDOR': 'Vaciado de conetenedor/campana verde',
+  };
+  
+  data.forEach(d => {
+    d.prestacion = prestacionMapping[d.prestacion];
+  });
+  console.log(data)
   let chart = Plot.plot({
     x: {
       type: 'time',
@@ -14,24 +32,39 @@ d3.csv("../../../dataset1_residuos.csv", d3.autoType).then((data)=>{
       domain: [new Date(2021, 0, 1), new Date(2022, 0, 1)]
     },
     color: {
-      legend: true
+      legend: true,
+      range: ['red', 'orange']
     },
     marks: [
       Plot.areaY(data,
         Plot.binX(
           { y: 'count'},
           {
-            filter: d => {
-              return (
-                d.prestacion == 'RECUPERADOR URBANO ACOPIANDO RESIDUOS EN ZONA NO PREVISTA' ||
-                d.prestacion == 'RECOLECCIÓN DE RESIDUOS FUERA DEL CONTENEDOR' ||
-                d.prestacion == 'LIMPIEZA DE CAMPANA Y/O RESIDUOS DISEMINADOS ALREDEDOR'
-              )
-            },
             x: d => parseTime(d.fecha_hora_ingreso),
             thresholds: d3.timeWeek,
             fill: 'prestacion',
-            fillOpacity: 0.7
+            fillOpacity: 0.7,
+            filter: d => {
+              return (
+                d.prestacion === 'Residuos fuera de contenedor/campana verde'
+              )
+            },
+          }
+        )
+      ),
+      Plot.areaY(data,
+        Plot.binX(
+          { y: 'count'},
+          {
+            x: d => parseTime(d.fecha_hora_ingreso),
+            thresholds: d3.timeWeek,
+            fill: 'prestacion',
+            fillOpacity: 0.7,
+            filter: d => {
+              return (
+                d.prestacion === 'Vaciado de conetenedor/campana verde'
+              )
+            },
           }
         )
       ),
@@ -39,4 +72,3 @@ d3.csv("../../../dataset1_residuos.csv", d3.autoType).then((data)=>{
   });
   d3.select("#chart").append(()=> chart);
 })
-

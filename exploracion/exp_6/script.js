@@ -5,7 +5,7 @@ d3.json('https://cdn.jsdelivr.net/npm/d3-time-format@3/locale/es-ES.json').then(
 // const parseTime = d3.timeParse('%Y-%m-%d %H:%M:%S');
 
 const mapaFetch = d3.json('barrios.geojson')
-const dataFetch = d3.csv('../../../dataset1_residuos.csv', d3.autoType)
+const dataFetch = d3.csv('../../data/dataset_residuos.csv', d3.autoType)
 
 console.log(mapaFetch)
 console.log(dataFetch)
