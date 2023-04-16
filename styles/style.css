@@ -9,7 +9,7 @@ body {
 }
 
 a {
-    color: #E47A2E;
+    color: #006B5F;
     transition: 0.5s;
 }
 
@@ -55,7 +55,7 @@ h6 {
 }
 
 .back-to-top:hover {
-    background: #E47A2E;
+    background: #006B5F;
 }
 
 .back-to-top i {
@@ -81,7 +81,7 @@ h6 {
 .form-control:focus,
 .custom-select:focus {
     box-shadow: none;
-    border-color: #E47A2E;
+    border-color: #006B5F;
 }
 
 .custom-radio,
@@ -98,7 +98,7 @@ h6 {
 .custom-radio .custom-control-input:checked~.custom-control-label::before,
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
     color: #ffffff;
-    background: #E47A2E;
+    background: #006B5F;
 }
 
 button.btn {
@@ -110,8 +110,8 @@ button.btn {
 
 button.btn:hover {
     color: #ffffff;
-    background: #E47A2E;
-    border-color: #E47A2E;
+    background: #006B5F;
+    border-color: #006B5F;
 }
 
 
@@ -146,7 +146,7 @@ button.btn:hover {
 }
 
 .top-header .search input[type=text]:focus {
-    border-color: #E47A2E;
+    border-color: #006B5F;
 }
 
 .top-header .search button {
@@ -162,7 +162,7 @@ button.btn:hover {
 }
 
 .top-header .search button:hover {
-    background: #E47A2E;
+    background: #006B5F;
     color: #ffffff;
 }
 
@@ -185,8 +185,8 @@ button.btn:hover {
 }
 
 .top-header .social a:hover {
-    background: #E47A2E;
-    border: 1px solid #E47A2E;
+    background: #006B5F;
+    border: 1px solid #006B5F;
 }
 
 .top-header .social a i {
@@ -248,7 +248,7 @@ button.btn:hover {
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
     background: rgba(228, 122, 46, .2);
-    border-bottom: 2px solid #E47A2E;
+    border-bottom: 2px solid #00D6BD;
     transition: none;
 }
 
@@ -340,7 +340,7 @@ button.btn:hover {
 }
 
 .sidebar .sidebar-widget .category .fa-ul li a:hover {
-    color: #E47A2E;
+    color: #00EBCF;
 }
 
 .sidebar .sidebar-widget .tags {
@@ -358,8 +358,8 @@ button.btn:hover {
 
 .sidebar .sidebar-widget .tags a:hover {
     color: #ffffff;
-    background: #E47A2E;
-    border: 1px solid #E47A2E;
+    background: #006B5F;
+    border: 1px solid #006B5F;
 }
 
 .sidebar .sidebar-widget .image a {
@@ -375,7 +375,7 @@ button.btn:hover {
 
 .sidebar .sidebar-widget .image img:hover {
     transform: scale(1.1);
-    filter: blur(3px);
+    filter: blur(10px);
     -webkit-filter: blur(3px);
 }
 
@@ -414,7 +414,7 @@ button.btn:hover {
 }
 
 .single-news .sn-content a.sn-title:hover {
-    color: #E47A2E;
+    color: #006B5F;
 }
 
 .single-news .sn-content a.sn-date {
