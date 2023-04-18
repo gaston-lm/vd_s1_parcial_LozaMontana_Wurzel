@@ -29,10 +29,11 @@ d3.csv("../../data/dataset_residuos.csv", d3.autoType).then((data)=>{
     x: {
       type: 'time',
       // tickFormat: d3.timeFormat('%m'),
-      domain: [new Date(2021, 0, 1), new Date(2022, 0, 1)]
+      domain: [new Date(2021, 0, 1), new Date(2022, 0, 1)],
+      label:null,
     },
     color: {
-      legend: true,
+      legend: false,
       range: ['red', 'orange']
     },
     marks: [
@@ -45,6 +46,7 @@ d3.csv("../../data/dataset_residuos.csv", d3.autoType).then((data)=>{
             fill: 'prestacion',
             curve: "cardinal",
             fillOpacity: 0.7,
+            label:null,
             filter: d => {
               return (
                 d.prestacion === 'Residuos fuera de contenedor/campana verde'
@@ -61,6 +63,7 @@ d3.csv("../../data/dataset_residuos.csv", d3.autoType).then((data)=>{
             thresholds: d3.timeWeek,
             fill: 'prestacion',
             curve: "cardinal",
+            label:null,
             fillOpacity: 0.7,
             filter: d => {
               return (
