@@ -420,7 +420,7 @@ button.btn:hover {
 .single-news .sn-content a.sn-date {
     display: block;
     width: 100%;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
     color: #757575;
     font-size: 14px;
     font-weight: 400;
@@ -480,6 +480,10 @@ button.btn:hover {
 .container {
     position: relative;
 }
+
+/**********************************/
+/******* Extras gráficos CSS ******/
+/**********************************/
 
 #zona_1 {
     font-size:2em;
@@ -709,4 +713,19 @@ button.btn:hover {
     left:100px;
     rotate: -90deg;
     z-index: 2;
+}
+
+/**********************************/
+/******* Extras gráficos CSS ******/
+/**********************************/
+
+#primer_parrafo {
+    margin-top: 20px;
+}
+
+#bajada {
+    font-size: 20px;
+    font-weight: 400;
+    font-style: italic;
+    margin-top: 15px;
 }
