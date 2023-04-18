@@ -476,3 +476,222 @@ button.btn:hover {
         text-align: center; 
     } 
 }
+
+#exp_6_LIZ {
+    position: relative;
+}
+
+#exp_6_LIZ:before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid #fff;
+}
+
+#exp_6_LIZ:after {
+    content: "Text Overlay";
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: black;
+}
+
+#zona_1 {
+    font-size:2em;
+    position:absolute;
+    top:100px;
+    left:80px;
+    z-index:2 
+}
+
+#barrios_1_1 {
+    font-size:em;
+    position:absolute;
+    top:150px;
+    left:80px;
+    z-index:2 
+}
+
+#barrios_1_2 {
+    font-size:em;
+    position:absolute;
+    top:175px;
+    left:80px;
+    z-index:2 
+}
+
+#barrios_1_3 {
+    font-size:em;
+    position:absolute;
+    top:200px;
+    left:80px;
+    z-index:2 
+}
+
+#punto_1{
+    font-size:10em;
+    color: white;
+    position:absolute;
+    top:36px;
+    left:360px;
+    z-index:2     
+}
+
+#punto_1_text{
+    font-size:em;
+    color: black;
+    position:absolute;
+    top:198px;
+    left:377px;
+    z-index:2     
+}
+
+#zona_2 {
+    font-size:2em;
+    position:absolute;
+    top:600px;
+    left:50px;
+    z-index:2 
+}
+
+#barrios_2_1 {
+    font-size:em;
+    position:absolute;
+    top:650px;
+    left:50px;
+    z-index:2 
+}
+
+#barrios_2_2 {
+    font-size:em;
+    position:absolute;
+    top:675px;
+    left:50px;
+    z-index:2 
+}
+
+#barrios_2_3 {
+    font-size:em;
+    position:absolute;
+    top:700px;
+    left:50px;
+    z-index:2 
+}
+
+#punto_2{
+    font-size:10em;
+    color: white;
+    position:absolute;
+    top:165px;
+    left:540px;
+    z-index:2     
+}
+
+#punto_2_text{
+    font-size:em;
+    color: black;
+    position:absolute;
+    top:326px;
+    left:557px;
+    z-index:2     
+}
+
+#zona_3 {
+    font-size:2em;
+    position:absolute;
+    top:150px;
+    left:700px;
+    z-index:2 
+}
+
+#barrios_3_1 {
+    font-size:em;
+    position:absolute;
+    top:200px;
+    left:700px;
+    z-index:2 
+}
+
+#barrios_3_2 {
+    font-size:em;
+    position:absolute;
+    top:225px;
+    left:700px;
+    z-index:2 
+}
+
+#barrios_3_3 {
+    font-size:em;
+    position:absolute;
+    top:250px;
+    left:700px;
+    z-index:2 
+}
+
+#punto_3{
+    font-size:10em;
+    color: white;
+    position:absolute;
+    top:228px;
+    left:300px;
+    z-index:2     
+}
+
+#punto_3_text{
+    font-size:em;
+    color: black;
+    position:absolute;
+    top:390px;
+    left:317px;
+    z-index:2     
+}
+
+#zona_4 {
+    font-size:2em;
+    position:absolute;
+    top:600px;
+    left:550px;
+    z-index:2 
+}
+
+#barrios_4 {
+    font-size:em;
+    position:absolute;
+    top:650px;
+    left:550px;
+    z-index:2 
+}
+
+#punto_4{
+    font-size:10em;
+    color: white;
+    position:absolute;
+    top:280px;
+    left:390px;
+    z-index:2     
+}
+
+#punto_4_text{
+    font-size:em;
+    color: black;
+    position:absolute;
+    top:442px;
+    left:406px;
+    z-index:2     
+}

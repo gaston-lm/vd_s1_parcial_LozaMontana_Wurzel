@@ -14,6 +14,7 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
   console.log([barrios, data])
   /* Mapa Coroplético */
   let chartMap = Plot.plot({
+    parent: "#mapa",
     // https://github.com/observablehq/plot#projection-options
     projection: {
       type: 'mercator',

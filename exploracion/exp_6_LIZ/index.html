@@ -17,12 +17,45 @@
       #chart svg{
         max-width: initial;
       }
+      #mapa-container{
+        position: relative;
+      }
+
+      #mapa{
+        height:500px;
+      }
+
+      #capas-superpuestas{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      .flecha{
+        position: absolute;
+        width:20px;
+        height:20px;
+        background-color: red;
+      }
+
+      .texto{
+        position: absolute;
+        color:white;
+      }
+
     </style>
   </head>
   <body>
 
     <div id="chart"></div>
-
+      <div id="mapa-container">
+        <div id="mapa"></div>
+        <div id="capas-superpuestas">
+          <!-- aquí van las flechas y el texto -->
+        </div>
+      </div>
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.contentWindow.js"></script>
