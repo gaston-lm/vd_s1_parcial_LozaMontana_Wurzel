@@ -43,6 +43,7 @@ d3.csv("../../data/dataset_residuos.csv", d3.autoType).then((data)=>{
             x: d => parseTime(d.fecha_hora_ingreso),
             thresholds: d3.timeWeek,
             fill: 'prestacion',
+            curve: "cardinal",
             fillOpacity: 0.7,
             filter: d => {
               return (
@@ -59,6 +60,7 @@ d3.csv("../../data/dataset_residuos.csv", d3.autoType).then((data)=>{
             x: d => parseTime(d.fecha_hora_ingreso),
             thresholds: d3.timeWeek,
             fill: 'prestacion',
+            curve: "cardinal",
             fillOpacity: 0.7,
             filter: d => {
               return (

@@ -545,11 +545,11 @@ button.btn:hover {
 }
 
 #punto_1{
-    font-size:10em;
+    font-size:2em;
     color: white;
     position:absolute;
-    top:36px;
-    left:360px;
+    top:198px;
+    left:377px;
     z-index:2     
 }
 
@@ -595,11 +595,11 @@ button.btn:hover {
 }
 
 #punto_2{
-    font-size:10em;
+    font-size:2em;
     color: white;
     position:absolute;
-    top:165px;
-    left:540px;
+    top:326px;
+    left:557px;
     z-index:2     
 }
 
@@ -645,11 +645,11 @@ button.btn:hover {
 }
 
 #punto_3{
-    font-size:10em;
+    font-size:2em;
     color: white;
     position:absolute;
-    top:228px;
-    left:300px;
+    top:390px;
+    left:317px;
     z-index:2     
 }
 
@@ -679,11 +679,11 @@ button.btn:hover {
 }
 
 #punto_4{
-    font-size:10em;
+    font-size:2em;
     color: white;
     position:absolute;
-    top:280px;
-    left:390px;
+    top:442px;
+    left:406px;
     z-index:2     
 }
 
@@ -693,5 +693,41 @@ button.btn:hover {
     position:absolute;
     top:442px;
     left:406px;
+    z-index:2     
+}
+
+#estacion_2{
+    font-size:15px;
+    color: black;
+    position:absolute;
+    top:225px;
+    left:600px;
+    z-index:2     
+}
+
+#punto_est2{
+    font-size: 10px;
+    color: red;
+    position:absolute;
+    top:230px;
+    left:580px;
+    z-index:2     
+}
+
+#estacion_5{
+    font-size:15px;
+    color: black;
+    position:absolute;
+    top:250px;
+    left:600px;
+    z-index:2     
+}
+
+#punto_est5{
+    font-size: 10px;
+    color: orange;
+    position:absolute;
+    top:255px;
+    left:580px;
     z-index:2     
 }

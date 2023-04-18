@@ -22,7 +22,7 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
     },
     color: {
       scheme: 'ylorbr',
-      legend: true,
+      legend: false,
     },
     marks: [
       Plot.density(data, { x: 'lon', y: 'lat', fill: 'density',bandwidth: 15, thresholds: 30 }),
