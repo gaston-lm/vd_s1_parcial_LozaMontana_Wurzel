@@ -4,45 +4,45 @@ d3.json('https://cdn.jsdelivr.net/npm/d3-time-format@3/locale/es-ES.json').then(
 
 // const parseTime = d3.timeParse('%Y-%m-%d %H:%M:%S');
 
-const mapaFetch = d3.json('barrios.geojson')
+const mapaFetch = d3.json('comunas.geojson')
 const dataFetch = d3.csv('../../data/dataset_residuos.csv', d3.autoType)
 
 console.log(mapaFetch)
 console.log(dataFetch)
 
-Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
-  console.log([barrios, data])
+Promise.all([mapaFetch, dataFetch]).then(([comunas, data]) => {
+  console.log([comunas, data])
 
-  const reclamosPorBarrio = d3.group(data, d => d.domicilio_barrio) // crea un Map
-  console.log('reclamosPorBarrio', reclamosPorBarrio)
+  const reclamosPorComuna = d3.group(data, d => d.domicilio_comuna) // crea un Map
+  console.log('reclamosPorComuna', reclamosPorComuna)
   
   /* Mapa Coroplético */
   let chartMap = Plot.plot({
     // https://github.com/observablehq/plot#projection-options
     projection: {
       type: 'mercator',
-      domain: barrios, // Objeto GeoJson a encuadrar
+      domain: comunas, // Objeto GeoJson a encuadrar
     },
     color: {
       // Quantize continuo (cant. denuncias) -> discreto (cant. colores)
       type: 'quantize', 
-      n: 10,
+      n: 5,
       scheme: 'ylorbr',
       label: 'Cantidad de denuncias',
       legend: true,
     },
     marks: [
-      Plot.geo(barrios, {
+      Plot.geo(comunas, {
         fill: d => {
-          let nombreBarrio = d.properties.BARRIO
-          let cantReclamos = reclamosPorBarrio.get(nombreBarrio).length
+          let numComuna = d.properties.COMUNAS
+          let cantReclamos = reclamosPorComuna.get(numComuna).length
           return cantReclamos
         },
         stroke: '#ccc',
         title: d => {
-          let nombreBarrio = d.properties.BARRIO
-          let cantReclamos = reclamosPorBarrio.get(nombreBarrio).length
-          return `${nombreBarrio}\n${cantReclamos} denuncias`
+          let numComuna = d.properties.COMUNAS
+          let cantReclamos = reclamosPorComuna.get(numComuna).length
+          return `Comuna ${numComuna}\n${cantReclamos} denuncias`
         }
       }),
     ],
