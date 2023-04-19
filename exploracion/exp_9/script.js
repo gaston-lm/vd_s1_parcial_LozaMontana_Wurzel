@@ -45,6 +45,7 @@ d3.csv("../../data/dataset_residuos.csv", d3.autoType).then((data)=>{
     x: {
       tickRotate: 0,
       label: null,
+      domain: ["6:00 - 10:00", "10:00 - 14:00", "14:00 - 18:00", "18:00 - 22:00", "02:00 - 06:00"]
     },
     y: {
       label: null,
