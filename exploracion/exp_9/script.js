@@ -13,9 +13,9 @@ function categorizarHora(hora) {
     return "14:00 - 18:00";
   } else if (hora >= 18 && hora < 22) {
     return "18:00 - 22:00";
-  } else if (hora >= 22 && hora < 2) {
+  } else if (hora === 22 || hora === 23 || hora === 0 || hora === 1) {
     return "22:00 - 02:00";
-  } else {
+  } else if (hora === 2 || hora === 3 || hora === 4 || hora === 5) {
     return "02:00 - 06:00";
   }
 }
@@ -44,6 +44,7 @@ d3.csv("../../data/dataset_residuos.csv", d3.autoType).then((data)=>{
     },
     x: {
       tickRotate: 0,
+      label: null,
     },
     y: {
       label: null,

@@ -20,17 +20,19 @@ d3.csv("../../data/dataset_residuos.csv", d3.autoType).then((data)=>{
   let chart = Plot.plot({
     x: {
       type: 'time',
-      tickFormat: d3.timeFormat('%m'),
+      tickFormat: d3.timeFormat('%B'),
       domain: [new Date(2021, 0, 1), new Date(2021, 11, 31)],
-      tickSpacing: 60,
+      tickSpacing: 80,
       line: true
     },
     y: {
       domain: [0, 800],
-      grid: true
+      ticks: [200, 400, 600, 800],
+      label: '↑ Denuncias'
     },
     color: {
-      legend: true,
+      legend: false,
+      range: ['#575555', '#3e941f']
     },
     marks: [
       Plot.line(data,
@@ -40,6 +42,7 @@ d3.csv("../../data/dataset_residuos.csv", d3.autoType).then((data)=>{
             x: d => parseTime(d.fecha_hora_ingreso),
             thresholds: d3.timeWeek,
             stroke: 'prestacion',
+            curve: 'cardinal',
             filter: d => {
               return (
                 (d.prestacion === 'Residuos fuera de contenedor/campana verde' ||
@@ -52,5 +55,5 @@ d3.csv("../../data/dataset_residuos.csv", d3.autoType).then((data)=>{
       ),
     ],
   });
-  d3.select("#chart").append(()=> chart);
+  d3.select("#chart_meses").append(()=> chart);
 })
