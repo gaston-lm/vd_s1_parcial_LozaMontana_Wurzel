@@ -6,6 +6,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     background: #ffffff;
+
 }
 
 a {
@@ -297,12 +298,14 @@ button.btn:hover {
 /**********************************/
 .sidebar {
     position: relative;
-    width: 100%;
+    width:100%;
+    margin-left: 50px;
+    margin-right:150px;
 }
 
 .sidebar .sidebar-widget {
     position: relative;
-    width: 100%;
+    width: 60%;
     margin-bottom: 45px;
 }
 
@@ -385,8 +388,10 @@ button.btn:hover {
 /**********************************/
 .single-news {
     position: relative;
-    width: 100%;
+    width: 80%;
     padding: 25px 0 0 0;
+    margin-left: 180px;
+    margin-right: 50px;
 }
 
 .single-news .sn-img {
