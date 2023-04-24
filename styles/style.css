@@ -298,29 +298,27 @@ button.btn:hover {
 /**********************************/
 .sidebar {
     position: relative;
-    width:100%;
-    margin-left: 50px;
-    margin-right:150px;
+    width: 80%;
+    margin-left: 60px;
 }
 
 .sidebar .sidebar-widget {
     position: relative;
-    width: 60%;
     margin-bottom: 45px;
 }
 
 .sidebar .sidebar-widget h2 {
     color: #353535;
-    font-size: 35px;
-    font-weight: 700;
-    margin-left: 40px;
+    font-size: 25px;
+    font-weight: 600;
+    margin-left: 30px;
 }
 
 .sidebar .sidebar-widget h2 i {
     position: absolute;
-    top: 8px;
+    top: 5px;
     left: 0;
-    font-size: 28px;
+    font-size: 20px;
 }
 
 .sidebar .sidebar-widget .category {
@@ -328,7 +326,7 @@ button.btn:hover {
 }
 
 .sidebar .sidebar-widget .category .fa-ul {
-    margin-left: 23px;
+    margin-left: 25px;
 }
 
 .sidebar .sidebar-widget .category .fa-ul li {
@@ -386,12 +384,17 @@ button.btn:hover {
 /**********************************/
 /********* Single News CSS ********/
 /**********************************/
+
+.container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1000px;
+}
+
+/**********************************/
+/********* Single News CSS ********/
+/**********************************/
 .single-news {
     position: relative;
-    width: 80%;
-    padding: 25px 0 0 0;
-    margin-left: 180px;
-    margin-right: 50px;
+    padding: 10px 0 0 0;
 }
 
 .single-news .sn-img {
@@ -741,9 +744,29 @@ button.btn:hover {
     padding-left: 30px;
 }
 
-#chart_meses{
-    overflow-y:auto;
+/**********************************/
+/*******       Charts        ******/
+/**********************************/
+.container_grafico {
+    position: relative;
 }
+
+#chart_map{
+    height:500px;
+}
+
+#chart_map svg{
+    max-width: initial;
+}
+
 #chart_meses svg{
+    max-width: initial;
+}
+
+#chart_canales{
+    height:500px;
+}
+
+#chart_canales svg{
     max-width: initial;
 }
