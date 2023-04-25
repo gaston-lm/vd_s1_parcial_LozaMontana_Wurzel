@@ -386,7 +386,7 @@ button.btn:hover {
 /**********************************/
 
 .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
-    max-width: 1000px;
+    max-width: 1024px;
 }
 
 /**********************************/
@@ -749,10 +749,21 @@ button.btn:hover {
 /**********************************/
 .container_grafico {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #chart_map{
-    height:500px;
+    height: 510px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#referencia {
+    width: 250px;
 }
 
 #chart_map svg{

@@ -113,13 +113,15 @@
                                 Nulla consectetur risus libero. Donec mattis tortor justo, ac egestas purus condimentum in. Etiam viverra nec metus quis egestas. Nulla commodo, lectus nec dictum malesuada, tortor tellus consequat nisi, sit amet dictum erat tellus in libero. In dignissim lectus quis elit posuere, sit amet tempor nisi iaculis. Curabitur eget ante in libero laoreet finibus nec et libero. In hac habitasse platea dictumst. Morbi tincidunt ex non odio auctor tristique. Nulla facilisi. Maecenas ullamcorper, felis eget interdum semper, mi ipsum auctor magna, ut ullamcorper leo metus vitae ex. Curabitur eu tempor elit. Phasellus blandit elit fringilla, ultricies ligula sed, pretium ligula. Duis condimentum elementum orci, pulvinar mattis elit luctus at. Vestibulum lacinia porttitor urna, eget aliquet justo porta sed. Cras pulvinar euismod consectetur. Vestibulum quis nisi non erat feugiat viverra. 
                             </p>
                             <p class="chart_title">¿Cáles son las áreas de la ciudad más reportadas?</p>
-                            <div class="container">
-                                <!-- <div id="chart_map"></div> -->
-                                <iframe src="exploracion\exp_6_LIZ\index.html" id="iFrameResizer0" frameBorder="0" scrolling="yes" style="overflow: hidden; height: 800px; width:900px;"></iframe>
-                                <div id= "zona_1">Zona 1</div>
-                                <div id= "barrios_1_1">Nuñez, Coghlan,</div>
-                                <div id= "barrios_1_2">Belgrano, Colegiales,</div>
-                                <div id= "barrios_1_3">Villa Urquiza</div>
+                            <div class="container_grafico">
+                                <div id="chart_map"></div>
+                                <img src="img\legend_map.png" alt="legend" id="referencia">
+                                <div>
+                                    <div id= "zona_1">Zona 1</div>
+                                    <div id= "barrios_1_1">Nuñez, Coghlan,</div>
+                                    <div id= "barrios_1_2">Belgrano, Colegiales,</div>
+                                    <div id= "barrios_1_3">Villa Urquiza</div>
+                                </div>
                                 <div id= "punto_1"><i class="fas fa-map-marker"></i></div>
                                 <div id= "punto_1_text">1</div>
                                 <div id= "zona_2">Zona 2</div>     
@@ -163,9 +165,6 @@
                             <div class="container_grafico">
                                 <div id="chart_canales"></div>
                             </div>
-                            <!-- <div class="container">
-                                <iframe src="exploracion\exp_9\index.html" id="iFrameResizer0" frameBorder="0" scrolling="yes" style="overflow: hidden; height: 800px; width:900px;"></iframe>
-                            </div> -->
                         </div>
                     </div>
 
@@ -256,6 +255,7 @@
         <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.contentWindow.js"></script>
 
+        <script src="scripts\scriptMap.js"></script>
         <script src="scripts\scriptMeses.js"></script>
         <script src="scripts\scriptCanales.js"></script>
     </body>

@@ -1,28 +1,17 @@
-d3.json('https://cdn.jsdelivr.net/npm/d3-time-format@3/locale/es-ES.json').then(locale => {
-  d3.timeFormatDefaultLocale(locale)
-})
-
-// const parseTime = d3.timeParse('%Y-%m-%d %H:%M:%S');
-
-const mapaFetch = d3.json('barrios.geojson')
+const mapaFetch = d3.json('data/barrios.geojson')
 const dataFetch = d3.csv('../../data/dataset_residuos.csv', d3.autoType)
 
-console.log(mapaFetch)
-console.log(dataFetch)
-
 Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
-  console.log([barrios, data])
-  /* Mapa Coroplético */
+  // console.log([barrios, data])
   let chartMap = Plot.plot({
     parent: "#mapa",
-    // https://github.com/observablehq/plot#projection-options
     projection: {
       type: 'mercator',
-      domain: barrios, // Objeto GeoJson a encuadrar
+      domain: barrios,
     },
     color: {
       scheme: 'ylorbr',
-      legend: true,
+      legend: false,
     },
     marks: [
       Plot.density(data, { x: 'lon', y: 'lat', fill: 'density',bandwidth: 15, thresholds: 30 }),
@@ -31,6 +20,7 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
         title: d => `${d.properties.BARRIO}\n${d.properties.DENUNCIAS} denuncias`,
       }),
     ],
+    width: 500,
   })
   /* Agregamos al DOM la visualización chartMap */
   d3.select('#chart_map').append(() => chartMap)
