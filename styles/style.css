@@ -526,20 +526,20 @@ button.btn:hover {
 #zona_2 {
     top:100px;
     left:445px;
-    max-width: 245px;
+    max-width: 180px;
     text-align: center;
 }
 
 #zona_3 {
     top: 490px;
-    left: 414px;
-    max-width: 254px;
+    left: 5px;
+    max-width: 160px;
     text-align: center;
 }
 
 #zona_4 {
     top:500px;
-    left:20px;
+    left:474px;
 }
 
 #referencia {
@@ -593,6 +593,10 @@ button.btn:hover {
     z-index:2   
 }
 
+/**********************************/
+/*******   Extras ? CSS   ******/
+/**********************************/
+
 #estacion_2{
     font-size:15px;
     color: black;
@@ -637,6 +641,34 @@ button.btn:hover {
     left:100px;
     rotate: -90deg;
     z-index: 2;
+}
+
+/**********************************/
+/*******  Extras barras CSS  ******/
+/**********************************/
+
+#legend_barras {
+    display: flex;
+}
+
+.items_legend {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    margin-right: 30px;
+}
+
+.items_legend i {
+    font-size: 10px;
+    margin-right: 5px;
+}
+
+#AppBA {
+    color: #429439;
+}
+
+#otros {
+    color: #d3d3d3;
 }
 
 /**********************************/
@@ -688,7 +720,8 @@ button.btn:hover {
 }
 
 #chart_canales{
-    height:500px;
+    height:400px;
+    margin-top: 30px;
 }
 
 #chart_canales svg{
