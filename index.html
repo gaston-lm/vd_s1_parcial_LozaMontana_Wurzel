@@ -112,34 +112,43 @@
                             <p>
                                 Nulla consectetur risus libero. Donec mattis tortor justo, ac egestas purus condimentum in. Etiam viverra nec metus quis egestas. Nulla commodo, lectus nec dictum malesuada, tortor tellus consequat nisi, sit amet dictum erat tellus in libero. In dignissim lectus quis elit posuere, sit amet tempor nisi iaculis. Curabitur eget ante in libero laoreet finibus nec et libero. In hac habitasse platea dictumst. Morbi tincidunt ex non odio auctor tristique. Nulla facilisi. Maecenas ullamcorper, felis eget interdum semper, mi ipsum auctor magna, ut ullamcorper leo metus vitae ex. Curabitur eu tempor elit. Phasellus blandit elit fringilla, ultricies ligula sed, pretium ligula. Duis condimentum elementum orci, pulvinar mattis elit luctus at. Vestibulum lacinia porttitor urna, eget aliquet justo porta sed. Cras pulvinar euismod consectetur. Vestibulum quis nisi non erat feugiat viverra. 
                             </p>
-                            <p class="chart_title">¿Cáles son las áreas de la ciudad más reportadas?</p>
                             <div class="container_grafico">
-                                <div id="chart_map"></div>
+                                <p class="chart_title">Las zonas de la ciudad más reportadas</p>
                                 <img src="img\legend_map.png" alt="legend" id="referencia">
-                                <div>
-                                    <div id= "zona_1">Zona 1</div>
-                                    <div id= "barrios_1_1">Nuñez, Coghlan,</div>
-                                    <div id= "barrios_1_2">Belgrano, Colegiales,</div>
-                                    <div id= "barrios_1_3">Villa Urquiza</div>
+                                <div id="chart_map"></div>
+                                <div class="label_zona" id="zona_1">
+                                    <div class="label_zona_title">Zona 1</div>
+                                    <div>Nuñez, Coghlan, Belgrano, Colegiales y Villa Urquiza</div>
                                 </div>
-                                <div id= "punto_1"><i class="fas fa-map-marker"></i></div>
-                                <div id= "punto_1_text">1</div>
-                                <div id= "zona_2">Zona 2</div>     
-                                <div id= "barrios_2_1">Villa Devoto, Villa del Parque,</div>
-                                <div id= "barrios_2_2">M. Castro, Villa Luro, </div>
-                                <div id= "barrios_2_3">Velez Sarsf. Floresta, V. Santa Rita, </div>
-                                <div id= "punto_2"><i class="fas fa-map-marker"></i></div>    
-                                <div id= "punto_2_text">2</div>            
-                                <div id= "zona_3">Zona 3</div>   
-                                <div id= "barrios_3_1">Palermo, Recoleta,</div> 
-                                <div id= "barrios_3_2">Retiro, San Nicolas, </div>  
-                                <div id= "barrios_3_3"> Balvanera, Almagro</div>
-                                <div id= "punto_3"><i class="fas fa-map-marker"></i></div>   
-                                <div id= "punto_3_text">3</div>              
-                                <div id= "zona_4">Zona 4</div> 
-                                <div id= "barrios_4">Flores, Parque Chacabuco</div>
-                                <div id= "punto_4"><i class="fas fa-map-marker"></i></div>
-                                <div id= "punto_4_text">4</div>
+                                <div class="puntos" id= "punto_1">
+                                    <i class="fas fa-map-marker"></i>
+                                    <div>1</div>
+                                </div>
+                                <div class="label_zona" id="zona_3">
+                                    <div class="label_zona_title">Zona 3</div>
+                                    <div>Villa Devoto, Floresta, Monte Castro, Villa del Parque, V. Santa Rita y Velez Sarsf.</div>
+                                </div>
+                                <div class="puntos" id= "punto_2">
+                                    <i class="fas fa-map-marker"></i>
+                                    <div>2</div>
+                                </div>
+                                <div class="label_zona" id="zona_2">
+                                    <div class="label_zona_title">Zona 2</div>
+                                    <div>Palermo, Recoleta, Balvanera, San Nicolas, Retiro y Almagro</div>
+                                </div>
+                                <div class="puntos" id= "punto_3">
+                                    <i class="fas fa-map-marker"></i>
+                                    <div>3</div>
+                                </div>   
+                                <div class="label_zona" id="zona_4">
+                                    <div class="label_zona_title">Zona 4</div>
+                                    <div>Parque Chacabuco</div>
+                                    <div>Caballito y Flores</div>
+                                </div>
+                                <div class="puntos" id= "punto_4">
+                                    <i class="fas fa-map-marker"></i>
+                                    <div>4</div>
+                                </div>
                             </div>
                             <p>
                                 Aliquam eleifend pharetra nunc, et finibus felis tristique nec. Ut mattis nisi ante, vel varius ipsum consectetur sit amet. Donec sed eros at magna sollicitudin molestie. Cras quis malesuada felis. Maecenas sodales nunc sit amet lobortis iaculis. Etiam eget consectetur sem, et aliquet justo. Curabitur at viverra lacus, eget feugiat erat. Fusce lacinia faucibus diam ut vestibulum. Vestibulum nisi sem, lacinia ullamcorper iaculis a, finibus eget mauris. Vestibulum elementum quam quam, sit amet condimentum odio luctus at. Aenean dictum nec nisi vitae hendrerit. Nulla facilisi. 
@@ -208,11 +217,11 @@
                             <div class="sidebar-widget">
                                 <h2><i class="fas fa-align-justify"></i>Lo mas leido</h2>
                                 <div class="image">
-                                    <a href=""><img src="img/larreta.jpg" alt="Image"></a>
+                                    <a href=""><img src="img/larreta.jpg" alt="Image" class="img_side"></a>
                                     <a class> El nuevo plan de Larreta</a>
-                                    <a href=""><img src="img/pascuas.jpg" alt="Image"></a>
+                                    <a href=""><img src="img/pascuas.jpg" alt="Image" class="img_side"></a>
                                     <a class></i> Pascuas en la ciudad</a>
-                                    <a href=""><img src="img/dillom.jpg" alt="Image"></a>
+                                    <a href=""><img src="img/dillom.jpg" alt="Image" class="img_side"></a>
                                     <a class></i> Proximos conciertos</a>
                                 </div>
                             </div>

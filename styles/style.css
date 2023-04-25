@@ -6,7 +6,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     background: #ffffff;
-
+    font-size: 15px;
 }
 
 a {
@@ -309,7 +309,7 @@ button.btn:hover {
 
 .sidebar .sidebar-widget h2 {
     color: #353535;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 600;
     margin-left: 30px;
 }
@@ -318,7 +318,7 @@ button.btn:hover {
     position: absolute;
     top: 5px;
     left: 0;
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .sidebar .sidebar-widget .category {
@@ -326,7 +326,7 @@ button.btn:hover {
 }
 
 .sidebar .sidebar-widget .category .fa-ul {
-    margin-left: 25px;
+    margin-left: 23px;
 }
 
 .sidebar .sidebar-widget .category .fa-ul li {
@@ -377,8 +377,12 @@ button.btn:hover {
 
 .sidebar .sidebar-widget .image img:hover {
     transform: scale(1.1);
-    filter: blur(10px);
+    filter: blur(10px), grayscale(100%);
     -webkit-filter: blur(3px);
+}
+
+.img_side {
+    filter: grayscale(100%);
 }
 
 /**********************************/
@@ -418,7 +422,7 @@ button.btn:hover {
     color: #353535;
     font-size: 35px;
     font-weight: 700;
-    line-height: 32px;
+    line-height: 40px;
     margin-bottom: 10px;
 }
 
@@ -491,191 +495,102 @@ button.btn:hover {
 }
 
 /**********************************/
-/******* Extras gráficos CSS ******/
+/*******   Extras Mapa CSS   ******/
 /**********************************/
 
+.label_zona {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 2;
+}
+
+.label_zona div {
+    font-size: 15px;
+}
+
+.label_zona_title {
+    font-weight: 600;
+    font-size: 20px !important
+}
+
 #zona_1 {
-    font-size:2em;
-    position:absolute;
-    top:150px;
-    left:60px;
-    z-index:2 
+    top:100px;
+    left:6px;
+    max-width: 190px;
+    text-align: center;
 }
 
-#barrios_1_1 {
-    font-size:em;
-    position:absolute;
-    top:200px;
-    left:50px;
-    z-index:2 
+#zona_2 {
+    top:100px;
+    left:445px;
+    max-width: 245px;
+    text-align: center;
 }
 
-#barrios_1_2 {
-    font-size:em;
-    position:absolute;
-    top:225px;
-    left:35px;
-    z-index:2 
+#zona_3 {
+    top: 490px;
+    left: 414px;
+    max-width: 254px;
+    text-align: center;
 }
 
-#barrios_1_3 {
-    font-size:em;
-    position:absolute;
-    top:250px;
-    left:60px;
-    z-index:2 
+#zona_4 {
+    top:500px;
+    left:20px;
+}
+
+#referencia {
+    width: 250px;
+    margin-top: -15px;
+    margin-bottom: 20px;
 }
 
 #punto_1{
     font-size:2em;
     color: white;
     position:absolute;
-    top:155px;
-    left:370px;
+    top: 170px;
+    left: 290px;
     z-index:2     
-}
-
-#punto_1_text{
-    font-size:em;
-    color: black;
-    position:absolute;
-    top:165px;
-    left:377px;
-    z-index:2     
-}
-
-#zona_2 {
-    font-size:2em;
-    position:absolute;
-    top:630px;
-    left:120px;
-    z-index:2 
-}
-
-#barrios_2_1 {
-    font-size:em;
-    position:absolute;
-    top:680px;
-    left:70px;
-    z-index:2 
-}
-
-#barrios_2_2 {
-    font-size:em;
-    position:absolute;
-    top:705px;
-    left:95px;
-    z-index:2 
-}
-
-#barrios_2_3 {
-    font-size:em;
-    position:absolute;
-    top:730px;
-    left:50px;
-    z-index:2 
 }
 
 #punto_2{
     font-size:2em;
     color: white;
     position:absolute;
-    top:280px;
-    left:525px;
+    top: 269px;
+    left: 412px;
     z-index:2     
-}
-
-#punto_2_text{
-    font-size:em;
-    color: black;
-    position:absolute;
-    top: 292px;
-    left:533px;
-    z-index:2     
-}
-
-#zona_3 {
-    font-size:2em;
-    position:absolute;
-    top:75px;
-    left:650px;
-    z-index:2 
-}
-
-#barrios_3_1 {
-    font-size:em;
-    position:absolute;
-    top:125px;
-    left:635px;
-    z-index:2 
-}
-
-#barrios_3_2 {
-    font-size:em;
-    position:absolute;
-    top:150px;
-    left:633px;
-    z-index:2 
-}
-
-#barrios_3_3 {
-    font-size:em;
-    position:absolute;
-    top:175px;
-    left:632px;
-    z-index:2 
 }
 
 #punto_3{
     font-size:2em;
     color: white;
     position:absolute;
-    top:350px;
-    left:280px;
+    top: 325px;
+    left: 210px;
     z-index:2     
-}
-
-#punto_3_text{
-    font-size:em;
-    color: black;
-    position:absolute;
-    top:362px;
-    left:288px;
-    z-index:2     
-}
-
-#zona_4 {
-    font-size:2em;
-    position:absolute;
-    top:570px;
-    left:550px;
-    z-index:2 
-}
-
-#barrios_4 {
-    font-size:em;
-    position:absolute;
-    top:620px;
-    left:505px;
-    z-index:2 
 }
 
 #punto_4{
     font-size:2em;
     color: white;
     position:absolute;
-    top:402px;
-    left:380px;
+    top: 367px;
+    left: 292px;
     z-index:2     
 }
 
-#punto_4_text{
-    font-size:em;
+.puntos div {
+    font-size:15px;
     color: black;
     position:absolute;
-    top:413px;
-    left:387px;
-    z-index:2     
+    top: 8px;
+    left: 7px;
+    z-index:2   
 }
 
 #estacion_2{
@@ -725,7 +640,7 @@ button.btn:hover {
 }
 
 /**********************************/
-/******* Extras gráficos CSS ******/
+/*******      Paratextos     ******/
 /**********************************/
 
 #primer_parrafo {
@@ -739,9 +654,8 @@ button.btn:hover {
     margin-top: 15px;
 }
 .chart_title {
-    font-size: 18px;
-    font-weight: 400;
-    padding-left: 30px;
+    font-size: 22px;
+    font-weight: 700;
 }
 
 /**********************************/
@@ -753,6 +667,8 @@ button.btn:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 70px;
+    margin-bottom: 70px;
 }
 
 #chart_map{
@@ -760,10 +676,7 @@ button.btn:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-#referencia {
-    width: 250px;
+    margin-left: 75px;
 }
 
 #chart_map svg{
