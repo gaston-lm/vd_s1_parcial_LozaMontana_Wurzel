@@ -9,30 +9,51 @@ d3.csv("../../data/dataset_residuos.csv", d3.autoType).then((data)=>{
     'LIMPIEZA DE CAMPANA Y/O RESIDUOS DISEMINADOS ALREDEDOR': 'Residuos fuera de contenedor/campana verde',
     'RECOLECCIÓN DE RESIDUOS FUERA DEL CONTENEDOR': 'Residuos fuera de contenedor/campana verde',
     'RESIDUOS ACUMULADOS O DISEMINADOS FUERA DE PUNTO VERDE': 'Residuos fuera de contenedor/campana verde',
-    'VACIADO DE CAMPANA VERDE': 'Vaciado de conetenedor/campana verde',
-    'VACIADO DE CONTENEDOR': 'Vaciado de conetenedor/campana verde',
+    'VACIADO DE CAMPANA VERDE': 'Residuos fuera de contenedor/campana verde',
+    'VACIADO DE CONTENEDOR': 'Residuos fuera de contenedor/campana verde',
+  
+  // 'Vaciado de conetenedor/campana verde'
+
   };
   
   data.forEach(d => {
     d.prestacion = prestacionMapping[d.prestacion];
   });
+
+  // const groupedData = d3.group(data, d => d3.timeDay.floor(parseTime(d.fecha_hora_ingreso)));
+  // const summedData = Array.from(groupedData, ([key, values]) => {
+  //   return {fecha_hora_ingreso: key, count: d3.sum(values, d => d.count)};
+  // });
+
   console.log(data)
   let chart = Plot.plot({
     x: {
       type: 'time',
-      tickFormat: d3.timeFormat('%B'),
       domain: [new Date(2021, 0, 1), new Date(2021, 11, 31)],
-      tickSpacing: 80,
-      line: true
+    tickFormat: function(d, i) {
+      var format = d3.timeFormat("%b");
+      var shift = i % 2 == 0 ? 0 : 0.5;
+      return format(new Date(d.getTime() + shift * 15 * 24 * 60 * 60 * 1000));
+    },
+    line: true
+      // type: 'time',
+      // tickFormat: function(d) { return (d3.timeFormat('%b')(d).charAt(0)).toUpperCase(); },
+      // domain: [new Date(2021, 0, 1), new Date(2021, 11, 31)],
+      // line: true,
+      //tickFormat: d3.timeFormat('%B'),
+      //tickSpacing: 80,
+      //tickCentered:true,
+      //ticks:['E','F','M','A','M','J','J','A','S','O','N','D'],
     },
     y: {
-      domain: [0, 800],
-      ticks: [200, 400, 600, 800],
-      label: '↑ Denuncias'
+      domain: [0, 1300],
+      label: '↑ Denuncias',
+      ticks:false,
     },
     color: {
       legend: false,
-      range: ['#575555', '#3e941f']
+      range: ['black'],
+      strokeWidth:10,
     },
     marks: [
       Plot.line(data,
@@ -45,14 +66,26 @@ d3.csv("../../data/dataset_residuos.csv", d3.autoType).then((data)=>{
             curve: 'cardinal',
             filter: d => {
               return (
-                (d.prestacion === 'Residuos fuera de contenedor/campana verde' ||
-                d.prestacion === 'Vaciado de conetenedor/campana verde')
-              )
+                (d.prestacion === 'Residuos fuera de contenedor/campana verde')              )
             },
             z: 'prestacion'
           }
         )
       ),
+      Plot.ruleX([new Date(2021, 2, 21)],{
+        y1:0,
+        y2:90,
+        strokeDasharray:"2,0,2",
+        strokeWidth:0.8,
+        stroke: '#F28C21',
+      }),
+      Plot.ruleX([new Date(2021, 2, 21)],{
+        y1:150,
+        y2:1500,
+        strokeDasharray:"2,0,2",
+        strokeWidth:0.8,
+        stroke: '#F28C21',
+      }),
     ],
     width: 640
   });
