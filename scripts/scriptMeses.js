@@ -30,7 +30,7 @@ d3.csv("../../data/dataset_residuos.csv", d3.autoType).then((data)=>{
     x: {
       type: 'time',
       domain: [new Date(2021, 0, 1), new Date(2021, 11, 31)],
-    tickFormat: function(d, i) {
+      tickFormat: function(d, i) {
       var format = d3.timeFormat("%b");
       var shift = i % 2 == 0 ? 0 : 0.5;
       return format(new Date(d.getTime() + shift * 15 * 24 * 60 * 60 * 1000));
@@ -47,7 +47,7 @@ d3.csv("../../data/dataset_residuos.csv", d3.autoType).then((data)=>{
     },
     y: {
       domain: [0, 1300],
-      label: '↑ Denuncias',
+      label: '',
       ticks:false,
     },
     color: {
@@ -81,7 +81,7 @@ d3.csv("../../data/dataset_residuos.csv", d3.autoType).then((data)=>{
       }),
       Plot.ruleX([new Date(2021, 2, 21)],{
         y1:150,
-        y2:1500,
+        y2:1300,
         strokeDasharray:"2,0,2",
         strokeWidth:0.8,
         stroke: '#F28C21',

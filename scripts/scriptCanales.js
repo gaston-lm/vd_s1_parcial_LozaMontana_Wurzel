@@ -41,13 +41,12 @@ d3.csv("../../data/dataset_residuos.csv", d3.autoType).then((data)=>{
       tickRotate: 0,
       label: null,
       domain: ["6:00 - 10:00", "10:00 - 14:00", "14:00 - 18:00", "18:00 - 22:00", "22:00 - 02:00", "02:00 - 06:00"],
-      tickSize: 0,
+      tickSize: 0
     },
     y: {
       ticks: [],
       tickSize: 0,
       label: null,
-      
     },
     marks: [
       Plot.barY(data,
@@ -60,7 +59,10 @@ d3.csv("../../data/dataset_residuos.csv", d3.autoType).then((data)=>{
         ),
       ),
     ],
-    marginBottom: 80
+    marginBottom: 80,
+    style: {
+      fontSize: 13
+    }
   });
   d3.select("#chart_canales").append(()=> chart);
 
