@@ -4,7 +4,7 @@ d3.json('https://cdn.jsdelivr.net/npm/d3-time-format@3/locale/es-ES.json').then(
 
 const parseTime = d3.timeParse('%Y-%m-%d %H:%M:%S');
 
-d3.csv("../../data/dataset_residuos.csv", d3.autoType).then((data)=>{
+d3.csv("data/dataset_residuos.csv", d3.autoType).then((data)=>{
   const prestacionMapping = {
     'LIMPIEZA DE CAMPANA Y/O RESIDUOS DISEMINADOS ALREDEDOR': 'Residuos fuera de contenedor/campana verde',
     'RECOLECCIÓN DE RESIDUOS FUERA DEL CONTENEDOR': 'Residuos fuera de contenedor/campana verde',
