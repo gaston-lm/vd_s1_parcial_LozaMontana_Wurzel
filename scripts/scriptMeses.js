@@ -48,7 +48,7 @@ d3.csv("../../data/dataset_residuos.csv", d3.autoType).then((data)=>{
     },
     y: {
       domain: [0, 1300],
-      label: '↑ Denuncias',
+      label: '',
       ticks:false,
     },
     color: {
@@ -82,7 +82,7 @@ d3.csv("../../data/dataset_residuos.csv", d3.autoType).then((data)=>{
       }),
       Plot.ruleX([new Date(2021, 2, 21)],{
         y1:150,
-        y2:1500,
+        y2:1300,
         strokeDasharray:"2,0,2",
         strokeWidth:0.8,
         stroke: '#993504',
