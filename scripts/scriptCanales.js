@@ -14,7 +14,7 @@ function categorizarHora(hora) {
   }
 }
 
-d3.csv("../../data/dataset_residuos.csv", d3.autoType).then((data)=>{
+d3.csv("data/dataset_residuos.csv", d3.autoType).then((data)=>{
   const canalMapping = {
     'App BA 147': 'App BA 147',
     'Boti': 'App BA 147',
