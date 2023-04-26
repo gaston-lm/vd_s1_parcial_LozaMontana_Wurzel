@@ -10,7 +10,7 @@ body {
 }
 
 a {
-    color: #006B5F;
+    color: #D65708;
     transition: 0.5s;
 }
 
@@ -43,7 +43,7 @@ h6 {
 .back-to-top {
     position: fixed;
     display: none;
-    background: #353535;
+    background: #642506;
     color: #ffffff;
     width: 44px;
     height: 44px;
@@ -57,7 +57,7 @@ h6 {
 }
 
 .back-to-top:hover {
-    background: #006B5F;
+    background: #D65708;
 }
 
 .back-to-top i {
@@ -83,7 +83,7 @@ h6 {
 .form-control:focus,
 .custom-select:focus {
     box-shadow: none;
-    border-color: #006B5F;
+    border-color: #D65708;
 }
 
 .custom-radio,
@@ -100,7 +100,7 @@ h6 {
 .custom-radio .custom-control-input:checked~.custom-control-label::before,
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
     color: #ffffff;
-    background: #006B5F;
+    background: #D65708;
 }
 
 button.btn {
@@ -112,8 +112,8 @@ button.btn {
 
 button.btn:hover {
     color: #ffffff;
-    background: #006B5F;
-    border-color: #006B5F;
+    background: #D65708;
+    border-color: #D65708;
 }
 
 
@@ -148,7 +148,7 @@ button.btn:hover {
 }
 
 .top-header .search input[type=text]:focus {
-    border-color: #006B5F;
+    border-color: #D65708;
 }
 
 .top-header .search button {
@@ -164,7 +164,7 @@ button.btn:hover {
 }
 
 .top-header .search button:hover {
-    background: #006B5F;
+    background: #D65708;
     color: #ffffff;
 }
 
@@ -187,8 +187,8 @@ button.btn:hover {
 }
 
 .top-header .social a:hover {
-    background: #006B5F;
-    border: 1px solid #006B5F;
+    background: #D65708;
+    border: 1px solid #D65708;
 }
 
 .top-header .social a i {
@@ -249,8 +249,8 @@ button.btn:hover {
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-    background: #02554b;
-    border-bottom: 2px solid #00D6BD;
+    background: #732904;
+    border-bottom: 2px solid #F6821F;
     transition: none;
 }
 
@@ -342,7 +342,7 @@ button.btn:hover {
 }
 
 .sidebar .sidebar-widget .category .fa-ul li a:hover {
-    color: #00EBCF;
+    color: #D65708;
 }
 
 .sidebar .sidebar-widget .tags {
@@ -360,8 +360,8 @@ button.btn:hover {
 
 .sidebar .sidebar-widget .tags a:hover {
     color: #ffffff;
-    background: #006B5F;
-    border: 1px solid #006B5F;
+    background: #D65708;
+    border: 1px solid #D65708;
 }
 
 .sidebar .sidebar-widget .image a {
@@ -432,7 +432,7 @@ button.btn:hover {
 }
 
 .single-news .sn-content a.sn-title:hover {
-    color: #006B5F;
+    color: #732904;
 }
 
 .single-news .sn-content a.sn-date {
@@ -603,9 +603,27 @@ button.btn:hover {
 /*******  Extras Meses CSS   ******/
 /**********************************/
 
+.meses {
+    font-size:10px;
+    z-index:2;
+}
+
+#ene{position:absolute;top:376px;left:63px;}
+#feb{position:absolute;top:376px;left:109px;}
+#mar{position:absolute;top:376px;left:155px;}
+#abr{position:absolute;top:376px;left:206px;}
+#may{position:absolute;top:376px;left:253px;}
+#jun{position:absolute;top:376px;left:302px;}
+#jul{position:absolute;top:376px;left:353px;}
+#ago{position:absolute;top:376px;left:399px;}
+#sep{position:absolute;top:376px;left:447px;}
+#oct{position:absolute;top:376px;left:498px;}
+#nov{position:absolute;top:376px;left:544px;}
+#dic{position:absolute;top:376px;left:592px;}
+
 #temp_max{
     font-size:12px;
-    color: black;
+    color: #EC7114;
     position:absolute;
     top: 81px;
     left: 135px;
@@ -614,13 +632,23 @@ button.btn:hover {
 
 #fin_verano{
     font-size: 13px;
-    color: #864d18;
+    color: #993504;
+    font-weight: 600;
     position:absolute;
-    /* top:335px;
-    left:175px; */
     z-index:2 ;
-    top: 377px;
-    left: 152px; 
+    top: 330px;
+    left: 147px;    
+
+}
+
+#punto_cima{
+    color: #EC7114;
+    position:absolute;
+    z-index:2 ;
+    font-weight: bolder;
+    font-size: 12px;
+    top:47px;
+    left:146px;
 }
 
 #denuncias{

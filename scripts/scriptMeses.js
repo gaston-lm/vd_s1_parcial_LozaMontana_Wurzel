@@ -29,13 +29,14 @@ d3.csv("../../data/dataset_residuos.csv", d3.autoType).then((data)=>{
   let chart = Plot.plot({
     x: {
       type: 'time',
-      domain: [new Date(2021, 0, 1), new Date(2021, 11, 31)],
-      tickFormat: function(d, i) {
-      var format = d3.timeFormat("%b");
-      var shift = i % 2 == 0 ? 0 : 0.5;
-      return format(new Date(d.getTime() + shift * 15 * 24 * 60 * 60 * 1000));
-    },
-    line: true
+      domain: [new Date(2021, 0, 1), new Date(2021, 12, 1)],
+    //   tickFormat: function(d, i) {
+    //   var format = d3.timeFormat("%b");
+    //   var shift = i % 2 == 0 ? 0 : 0.5;
+    //   return format(new Date(d.getTime() + shift * 15 * 24 * 60 * 60 * 1000));
+    // },
+    line: true,
+    tickFormat: '',
       // type: 'time',
       // tickFormat: function(d) { return (d3.timeFormat('%b')(d).charAt(0)).toUpperCase(); },
       // domain: [new Date(2021, 0, 1), new Date(2021, 11, 31)],
@@ -77,14 +78,14 @@ d3.csv("../../data/dataset_residuos.csv", d3.autoType).then((data)=>{
         y2:90,
         strokeDasharray:"2,0,2",
         strokeWidth:0.8,
-        stroke: '#F28C21',
+        stroke: '#993504',
       }),
       Plot.ruleX([new Date(2021, 2, 21)],{
         y1:150,
         y2:1300,
         strokeDasharray:"2,0,2",
         strokeWidth:0.8,
-        stroke: '#F28C21',
+        stroke: '#993504',
       }),
     ],
     width: 640
