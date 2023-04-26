@@ -93,11 +93,11 @@
                 <div class="row">
                     <div class="col-md-8">
                         <div class="sn-content">
-                            <a class="sn-title" href="">La ciudad más sucia: ¿vecinos irresponsables o una dramática situación económica?</a>
+                            <a class="sn-title" href="">La ciudad más sucia: vecinos molestos con las prácticas de los más necesitados</a>
                             <p id="bajada">
                                 Cada vez más vecinos reportan residuos alrededor de contenedores y campanas verdes. 
-                                La peor cara de la crisis socio-económica: cada vez más personas
-                                necesitadas de buscar reciclables para vender o incluso alimentos para comer.
+                                Los restos son dejados por aquellos que buscan reciclables o incluso alimentos.
+                                ¿Dónde, cuándo y cómo denuncian los vecinos?
                             </p>
                             <a class="sn-date" href=""><i class="far fa-clock"></i>19-Abril-2023</a>
                             <a class="sn-content" href=""><i class="fas fa-users"></i> Gaston Loza Montaña & Elizabeth Wurzel</a>
@@ -114,7 +114,8 @@
                             </p>
                             <div class="container_grafico">
                                 <p class="chart_title">Las zonas de la ciudad más reportadas</p>
-                                <img src="img\legend_map.png" alt="legend" id="referencia">
+                                <!-- <p id="label_legend">Cantidad de denuncias:</p>
+                                <img src="img\legend_map.png" alt="legend" id="referencia"> -->
                                 <div id="chart_map"></div>
                                 <div class="label_zona" id="zona_1">
                                     <div class="label_zona_title">Zona 1</div>
@@ -158,9 +159,10 @@
                             </p>
                             <div class="container_grafico">
                                 <p class="chart_title">En el verano la basura se hace notar más</p>   
+                                <p class="chart_subtitle">Evolución de las denuncias a lo largo del año</p>
                                 <div id="chart_meses"></div>
-                                <div id="temp_max">1280</div>
-                                <div id= "fin_verano">20 mar</div>
+                                <div id="temp_max">1180</div>
+                                <div id= "fin_verano">fin verano</div>
                                 <div id= "punto_cima">|</div>
                                 <div class="meses">
                                     <div id="ene">ene</div> <div id="feb">feb</div><div id="mar">mar</div><div id="abr">abr</div><div id="may">may</div><div id="jun">jun</div><div id="jul">jul</div><div id="ago">ago</div><div id="sep">sep</div><div id="oct">oct</div><div id="nov">nov</div><div id="dic">dic</div>
@@ -174,6 +176,7 @@
                             </p>
                             <div class="container_grafico">
                                 <p class="chart_title">Los vecinos denuncian al mediodía y por la App</p>
+                                <p class="chart_subtitle">Distribución de denuncias totales por franja horaria</p>
                                 <div id="legend_barras">
                                     <div class="items_legend">
                                         <i class="fas fa-circle" id="AppBA"></i>App BA 147
@@ -183,11 +186,32 @@
                                     </div>
                                 </div>
                                 <div id="chart_canales"></div>
-                                <div id="proporcion_barras">30%</div>
+                                <div class="prop_comun" id="proporcion_barras_1">16%</div>
+                                <div id="proporcion_barras_2">30%</div>
+                                <div class="prop_comun" id="proporcion_barras_3">24%</div>
+                                <div class="prop_comun" id="proporcion_barras_4">22%</div>
+                                <div class="prop_comun" id="proporcion_barras_5">7%</div>
+                                <div class="prop_comun" id="proporcion_barras_6">1%</div>
                             </div>
                             <p>
                                 Aliquam eleifend pharetra nunc, et finibus felis tristique nec. Ut mattis nisi ante, vel varius ipsum consectetur sit amet. Donec sed eros at magna sollicitudin molestie. Cras quis malesuada felis. Maecenas sodales nunc sit amet lobortis iaculis. Etiam eget consectetur sem, et aliquet justo. Curabitur at viverra lacus, eget feugiat erat. Fusce lacinia faucibus diam ut vestibulum. Vestibulum nisi sem, lacinia ullamcorper iaculis a, finibus eget mauris. Vestibulum elementum quam quam, sit amet condimentum odio luctus at. Aenean dictum nec nisi vitae hendrerit. Nulla facilisi. 
                             </p>
+                            <p id="fuentes">
+                                Las visualizaciones fueron realizadas en base a los datos correspondientes a los contactos 
+                                realizados a través de línea 147 al Sistema Único de Atención Ciudadana (SUACI) de 
+                                la Ciudad de Buenos Aires en el año 2021. Los datos fueron previamente explorados,
+                                estandarizados y filtrados con Python y la librería Pandas. Se filtró por las siguientes 
+                                prestaciones denunciadas:
+                            </p>
+                            <ul id="fuentes_list">
+                                <li>Limpieza de campana y/o residuos diseminados alrededor.</li>
+                                <li>Vaciado de campana verde.</li>
+                                <li>Vaciado de contenedor.</li>
+                                <li>Residuos acumulados o diseminados fuera de punto verde.</li>
+                                <li>Recuperador urbano acopiando residuos en zona no prevista.</li>
+                                <li>Recolección de residuos fuera del contenedor.</li>
+                            </ul>
+
                         </div>
                     </div>
 
@@ -241,11 +265,11 @@
                                 <h2><i class="fas fa-align-justify"></i>Lo mas leído</h2>
                                 <div class="image">
                                     <a href=""><img src="img/larreta.jpg" alt="Image" class="img_side"></a>
-                                    <a class> El nuevo plan de Larreta</a>
+                                    <a class="sidebar_titles"> El nuevo plan de Larreta</a>
                                     <a href=""><img src="img/pascuas.jpg" alt="Image" class="img_side"></a>
-                                    <a class></i> Pascuas en la ciudad</a>
+                                    <a class="sidebar_titles"></i> Pascuas en la ciudad</a>
                                     <a href=""><img src="img/dillom.jpg" alt="Image" class="img_side"></a>
-                                    <a class></i> Próximos conciertos</a>
+                                    <a class="sidebar_titles"></i> Próximos conciertos</a>
                                 </div>
                             </div>
                         </div>

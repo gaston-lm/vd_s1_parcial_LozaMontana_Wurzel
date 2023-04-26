@@ -17,7 +17,7 @@ function categorizarHora(hora) {
 d3.csv("../../data/dataset_residuos.csv", d3.autoType).then((data)=>{
   const canalMapping = {
     'App BA 147': 'App BA 147',
-    'Boti': 'Otros canales',
+    'Boti': 'App BA 147',
     'Call Center': 'Otros canales',
     'Comuna': 'Otros canales',
     'GCS Web': 'Otros canales',
@@ -35,7 +35,7 @@ d3.csv("../../data/dataset_residuos.csv", d3.autoType).then((data)=>{
   let chart = Plot.plot({
     color: {
       legend: false,
-      range: ['#40942e', 'lightgray']
+      range: ['#CC4C01', 'lightgray']
     },
     x: {
       tickRotate: 0,
@@ -46,12 +46,12 @@ d3.csv("../../data/dataset_residuos.csv", d3.autoType).then((data)=>{
     y: {
       ticks: [],
       tickSize: 0,
-      label: null,
+      label: '',
     },
     marks: [
       Plot.barY(data,
         Plot.groupX(
-          { y: 'count'},
+          { y: 'proportion'},
           {
             x: 'fecha_hora_ingreso',
             fill: 'canal',
@@ -69,9 +69,9 @@ d3.csv("../../data/dataset_residuos.csv", d3.autoType).then((data)=>{
   d3.selectAll("#chart_canales rect")
   .attr("fill-opacity", function(d) {
     if (this.getAttribute("x") == "145") {
-      return 1;
+      return 0.9;
     } else {
-      return 0.4;
+      return 0.5;
     }
   }
 );

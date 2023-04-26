@@ -385,6 +385,12 @@ button.btn:hover {
     filter: grayscale(100%);
 }
 
+.sidebar_titles {
+    margin-bottom: 20px;
+    margin-top: 5px;
+    font-weight: 600;
+}
+
 /**********************************/
 /********* Single News CSS ********/
 /**********************************/
@@ -515,6 +521,7 @@ button.btn:hover {
 
 .label_zona div {
     font-size: 13px;
+    color: #81817f;
 }
 
 .label_zona_title {
@@ -523,75 +530,90 @@ button.btn:hover {
 }
 
 #zona_1 {
-    top:100px;
-    left:6px;
+    top:55px;
+    left:25px;
     max-width: 150px;
     text-align: center;
 }
 
+#zona_1 .label_zona_title {
+    color: #da5f20;;
+}
+
 #zona_2 {
-    top: 100px;
+    top: 55px;
     left: 445px;
     max-width: 170px;
     text-align: center;
 }
 
+#zona_2 .label_zona_title {
+    color: #812f0f;;
+}
+
 #zona_3 {
-    top: 490px;
-    left: 5px;
+    top: 465px;
+    left: 20px;
     max-width: 160px;
     text-align: center;
 }
 
-#zona_4 {
-    top:500px;
-    left:474px;
+#zona_3 .label_zona_title {
+    color: #812f0f;
 }
 
-#referencia {
-    width: 250px;
-    margin-top: -15px;
-    margin-bottom: 20px;
+#zona_4 {
+    top:465px;
+    left:460px;
+}
+
+#zona_4 .label_zona_title {
+    color: #c54d19;
 }
 
 #punto_1{
     font-size:2em;
-    color: white;
     position:absolute;
-    top: 170px;
-    left: 290px;
+    top: 106px;
+    left: 276px;
     z-index:2     
 }
 
 #punto_2{
     font-size:2em;
-    color: white;
     position:absolute;
-    top: 269px;
+    top: 212px;
     left: 412px;
     z-index:2     
 }
 
 #punto_3{
     font-size:2em;
-    color: white;
     position:absolute;
-    top: 325px;
-    left: 210px;
+    top: 261px;
+    left: 213px;
     z-index:2     
 }
 
 #punto_4{
     font-size:2em;
-    color: white;
     position:absolute;
-    top: 367px;
-    left: 292px;
+    top: 307px;
+    left: 295px;
     z-index:2     
+}
+
+.puntos {
+    color: #ffffff57;
+}
+
+.puntos:hover {
+    color: rgb(248, 248, 248)
 }
 
 .puntos div {
     font-size:15px;
+    font-weight: 600;
     color: black;
     position:absolute;
     top: 8px;
@@ -608,46 +630,46 @@ button.btn:hover {
     z-index:2;
 }
 
-#ene{position:absolute;top:376px;left:63px;}
-#feb{position:absolute;top:376px;left:109px;}
-#mar{position:absolute;top:376px;left:155px;}
-#abr{position:absolute;top:376px;left:206px;}
-#may{position:absolute;top:376px;left:253px;}
-#jun{position:absolute;top:376px;left:302px;}
-#jul{position:absolute;top:376px;left:353px;}
-#ago{position:absolute;top:376px;left:399px;}
-#sep{position:absolute;top:376px;left:447px;}
-#oct{position:absolute;top:376px;left:498px;}
-#nov{position:absolute;top:376px;left:544px;}
-#dic{position:absolute;top:376px;left:592px;}
+#ene{position:absolute;top:450px;left:63px;}
+#feb{position:absolute;top:450px;left:109px;}
+#mar{position:absolute;top:450px;left:155px;}
+#abr{position:absolute;top:450px;left:206px;}
+#may{position:absolute;top:450px;left:253px;}
+#jun{position:absolute;top:450px;left:302px;}
+#jul{position:absolute;top:450px;left:353px;}
+#ago{position:absolute;top:450px;left:399px;}
+#sep{position:absolute;top:450px;left:447px;}
+#oct{position:absolute;top:450px;left:498px;}
+#nov{position:absolute;top:450px;left:544px;}
+#dic{position:absolute;top:450px;left:592px;}
 
 #temp_max{
     font-size:12px;
-    color: #EC7114;
+    color: #993504;
     position:absolute;
-    top: 81px;
+    top: 104px;
     left: 135px;
-    z-index:2     
+    z-index:2;
+    font-weight: 700;    
 }
 
 #fin_verano{
     font-size: 13px;
-    color: #993504;
+    color: #EC7114;
     font-weight: 600;
-    position:absolute;
-    z-index:2 ;
-    top: 330px;
-    left: 147px;    
-
+    position: absolute;
+    z-index: 2;
+    top: 400px;
+    left: 141px;
 }
 
 #punto_cima{
-    color: #EC7114;
+    color: #993504;
     position:absolute;
     z-index:2 ;
     font-weight: bolder;
     font-size: 12px;
-    top:47px;
+    top:117px;
     left:146px;
 }
 
@@ -682,13 +704,55 @@ button.btn:hover {
 }
 
 #AppBA {
-    color: #429439;
+    color: #CC4C01;
 }
 
 #otros {
     color: #d3d3d3;
 }
 
+#proporcion_barras_1 {
+    position: absolute;
+    top: 275px;
+    left: 85px;
+}
+
+#proporcion_barras_2 {
+    position: absolute;
+    top: 110px;
+    left: 182px;
+    font-weight: 700;
+    color: #81817f;
+}
+
+#proporcion_barras_3 {
+    position: absolute;
+    top: 178px;
+    left: 274px;
+}
+
+#proporcion_barras_4 {
+    position: absolute;
+    top: 211px;
+    left: 372px;
+}
+
+#proporcion_barras_5 {
+    position: absolute;
+    top: 363px;
+    left: 470px;
+}
+
+#proporcion_barras_6 {
+    position: absolute;
+    top: 448px;
+    left: 564px;
+}
+
+.prop_comun {
+    font-weight: 500;
+    color: #8F8D8B;
+}
 /**********************************/
 /*******      Paratextos     ******/
 /**********************************/
@@ -708,6 +772,35 @@ button.btn:hover {
     font-weight: 700;
 }
 
+.chart_subtitle {
+    margin-top: -10px;
+    font-size: 15px;
+}
+
+#referencia {
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+#label_legend {
+    line-height: 12px;
+    position: absolute;
+    top: 39px;
+    left: 268px;
+    z-index: 2;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+#fuentes {
+    font-style: italic;
+    margin-top: 80px;
+}
+
+#fuentes_list {
+    font-style: italic;
+}
+
 /**********************************/
 /*******       Charts        ******/
 /**********************************/
@@ -717,8 +810,8 @@ button.btn:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 70px;
-    margin-bottom: 70px;
+    margin-top: 80px;
+    margin-bottom: 80px;
 }
 
 #chart_map{
