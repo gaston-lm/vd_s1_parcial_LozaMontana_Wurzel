@@ -1,6 +1,6 @@
-d3.json('https://cdn.jsdelivr.net/npm/d3-time-format@3/locale/es-ES.json').then(locale => {
-  d3.timeFormatDefaultLocale(locale)
-})
+// d3.json('https://cdn.jsdelivr.net/npm/d3-time-format@3/locale/es-ES.json').then(locale => {
+//   d3.timeFormatDefaultLocale(locale)
+// })
 
 const parseTime = d3.timeParse('%Y-%m-%d %H:%M:%S');
 
@@ -18,7 +18,7 @@ d3.csv("data/dataset_residuos.csv", d3.autoType).then((data)=>{
   });
 
   console.log(data)
-  
+
   let chart = Plot.plot({
     x: {
       type: 'time',
