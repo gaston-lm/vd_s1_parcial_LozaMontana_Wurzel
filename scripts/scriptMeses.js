@@ -16,7 +16,9 @@ d3.csv("data/dataset_residuos.csv", d3.autoType).then((data)=>{
   data.forEach(d => {
     d.prestacion = prestacionMapping[d.prestacion];
   });
+
   console.log(data)
+  
   let chart = Plot.plot({
     x: {
       type: 'time',
